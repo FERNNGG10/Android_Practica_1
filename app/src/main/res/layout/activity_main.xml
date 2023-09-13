@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:id="@+id/verde"
+       android:layout_width="0dp"
+       android:layout_height="150dp"
+      android:background="#008000"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+       android:gravity="center"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toTopOf="@+id/blanco"
+      >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:text="Practica1"
+          android:textSize="25dp"
+         android:textColor="@color/black"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Fernando Gabriel Olmos Cázares"
+          android:textSize="25dp"
+          android:textColor="@color/black"/>
+
+   </LinearLayout>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/blanco"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:background="@color/white"
+      app:layout_constraintTop_toBottomOf="@+id/verde"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/rojo"
+      >
+      <View
+         android:id="@+id/n1"
+          android:layout_width="25dp"
+          android:layout_height="wrap_content"
+         android:background="@color/black"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/n2"
+         ></View>
+      <View
+         android:id="@+id/n2"
+          android:layout_width="25dp"
+          android:layout_height="wrap_content"
+         android:background="#2E86C1"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/n1"></View>
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <LinearLayout
+       android:id="@+id/rojo"
+       android:layout_width="0dp"
+       android:layout_height="150dp"
+       android:background="#FF0000"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/blanco"
+       app:layout_constraintBottom_toBottomOf="parent"
+       >
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
